@@ -29,24 +29,32 @@
     // 2) 
     function mostraCategorias(categorias) {
         for (var i = 0; i < categorias.length; i++) {
+            var template = document.querySelector("#categorias-template").cloneNode(true);
+            template.removeAttribute("id");
+
             // Criar elementos HTML, colocá-los no body ou noutro lado qualquer.
             var categoria = categorias[i];
-            var catGeral = document.getElementById("categorias");
             var catTitulo = document.createElement("h2");
             catTitulo.textContent = categoria.name;
-            catGeral.appendChild(catTitulo);
+            template.appendChild(catTitulo);
 
             // apresentar cada descrição de cada categoria
             var catDesc = document.createElement("h2");
             catDesc.textContent = categoria.description;
-            catGeral.appendChild(catDesc);
+            template.appendChild(catDesc);
 
             //apresentar cada fotografia de cada categoria
             var catImagem = document.createElement("img");
             catImagem.setAttribute('src', getImagemCat(categoria.id));
-            catGeral.appendChild(catImagem);
+            template.appendChild(catImagem);
+
+            document.getElementById("listaCategorias").appendChild(template);
         }
     }
+
+
+
+
 
     function mostraPilotos() {
 

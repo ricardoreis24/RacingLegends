@@ -37,8 +37,8 @@
 </section>
 <section class="py-5">
 	<div class="container">
-		<div class="row filtr-container">
-			<div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
+		<div class="row filtr-container" id="listaCategorias">
+			<!--<div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
 				<div class="card border-dark">
 					<div class="card-header bg-dark text-light">
 						<h5 class="m-0">Titulo</h5>
@@ -47,7 +47,7 @@
 						
 					</div>
 				</div>
-			</div>
+			</div>-->
 		</div>
 	</div>
 </section>
@@ -62,7 +62,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 <script type="text/javascript" src="/js/jsFunction.js"></script>
 <script type="text/javascript" src="/js/jsLogic.js"></script>
-
+	
+<div style="display: none">
+	<div class="col-md-6 col-lg-4 filtr-item" data-category="2,3" id="categorias-template">
+		<div class="card border-dark">
+			<div class="card-header bg-dark text-light">
+				<h5 class="m-0">Titulo</h5>
+			</div>
+			<div class="card-body">
+						
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 
 </html>
