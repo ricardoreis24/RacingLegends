@@ -7,74 +7,57 @@
 	<title>RacingLegends</title>
 	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
-	<link rel="stylesheet" href="/css/Lightbox-Gallery.css">
+	<link rel="stylesheet" href="/fonts/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/-Filterable-Cards-.css">
 	<link rel="stylesheet" href="/css/Navigation-with-Search.css">
-	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/funcionalidade.css">
 </head>
 
 <body style="height: 100vh; width: 100%;">
 <section>
 	<nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
 		<div class="container">
-			<a class="navbar-brand" href="#">Racing Legends</a>
+			<a class="navbar-brand" href="index.html">Racing Legends</a>
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
 				<span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse"
 			     id="navcol-1">
 				<ul class="nav navbar-nav"></ul>
-				<form class="form-inline mr-auto" target="_self">
-					<div class="form-group">
-						<label for="search-field" style="padding-right: 10px;">
-							<i class="fa fa-search"></i>
-						</label><input class="form-control search-field" type="search" name="search" id="search-field">
-					</div>
-				</form><a class="btn btn-light action-button" role="button" href="#">Back</a>
+				<a class="btn btn-light ml-auto action-button" role="button" onclick="muda()">Back</a>
 			</div>
 		</div>
 	</nav>
 </section>
-<section class="py-5">
+<section id="section" class="py-5">
+	<div class="row filtr-container" id="pilotoVideo">
+	</div>
 	<div class="container">
 		<div class="row filtr-container" id="listaCategorias">
-			<!--<div class="col-md-6 col-lg-4 filtr-item" data-category="2,3">
-				<div class="card border-dark">
-					<div class="card-header bg-dark text-light">
-						<h5 class="m-0">Titulo</h5>
-					</div>
-					<div id="categorias" class="card-body">
-						
-					</div>
-				</div>
-			</div>-->
 		</div>
+		<div class="row filtr-container" id="listaPiloto">
+		</div>
+		<div class="row filtr-container" id="pilotoDet">
+		</div>
+
 	</div>
 </section>
-	<!--<div class="container" id="conteudo">
-		<div id="categorias">
-		</div>
-	</div>-->
 
-
-<script src="/js/jquery.min.js"></script>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-<script type="text/javascript" src="/js/jsFunction.js"></script>
-<script type="text/javascript" src="/js/jsLogic.js"></script>
-	
 <div style="display: none">
 	<div class="col-md-6 col-lg-4 filtr-item" data-category="2,3" id="categorias-template">
-		<div class="card border-dark">
-			<div class="card-header bg-dark text-light">
-				<h5 class="m-0">Titulo</h5>
-			</div>
-			<div class="card-body">
-						
-			</div>
-		</div>
 	</div>
 </div>
+
+<script>
+	function muda() {
+		var modal2 = document.querySelector('#listaCategorias');
+		modal2.classList.remove("hidden");
+	}
+</script>
+<script src="/JS/jquery.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/jsFunction.js"></script>
+<script type="text/javascript" src="/js/jsLogic.js"></script>
 </body>
 
 </html>
